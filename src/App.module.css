@@ -4,3 +4,8 @@
     width: 1080px;
     margin: auto;
 }
+.user {
+    border: 2px solid rgb(233, 233, 78);
+    margin-top: 10px;
+    padding: 5px 10px;
+}
