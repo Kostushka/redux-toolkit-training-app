@@ -3,29 +3,39 @@ import { useDispatch, useSelector } from 'react-redux';
 //     addCountAction,
 //     removeCountAction,
 // } from './store/counterReducer/counterReducer';
-// import { getUsersData } from './utils/getUsersData';
+// import { getUsersData } from './utils/getUsersData';s
 
 // import {
 //     addUsersAction,
 //     removeUsersAction,
 // } from './store/usersReducer/usersReducer';
+// import {
+//     addCount,
+//     removeCount,
+// } from './toolkitstore/counterToolkitReducer/counterToolkitReducer';
 import {
     addCount,
     removeCount,
-} from './toolkitstore/counterToolkitReducer/counterToolkitReducer';
+} from './toolkitstore/counterToolkitReducer/counterToolkitSlice';
 
+// import {
+//     addUser,
+//     removeUser,
+// } from './toolkitstore/usersToolkitReducer/usersToolkitReducer';
 import {
     addUser,
     removeUser,
-} from './toolkitstore/usersToolkitReducer/usersToolkitReducer';
+} from './toolkitstore/usersToolkitReducer/usersToolkitSlice';
 
 import styles from './App.module.css';
 
 const App = () => {
     // const count = useSelector((state) => state.count.count);
     // const users = useSelector((state) => state.users.users);
-    const count = useSelector((state) => state.toolkitCounter.count);
-    const users = useSelector((state) => state.toolkitUsers.users);
+    // const count = useSelector((state) => state.toolkitCounter.count);
+    // const users = useSelector((state) => state.toolkitUsers.users);
+    const count = useSelector((state) => state.sliceCounter.count);
+    const users = useSelector((state) => state.sliceUsers.users);
 
     const dispatch = useDispatch();
 
